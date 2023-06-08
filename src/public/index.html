@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vehicle Registration Form </title>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  
+    <!-------------------01. Driver Details--------------------->
+    
+    <section class="container" id="">
+      <header>Vehical Information With QR Code</header>
+      <form action="#" class="form" onsubmit="callValue()">
+        <div class="input-box">
+          <header>01. Driver Details</header>
+          <label>Driver Name</label>
+          <input type="text" placeholder="Enter full name" id="name1"  />
+        </div>
+        <div class="input-box">
+          <label>Email Address</label>
+          <input type="email" placeholder="Enter email address" id="email"  />
+        </div>
+        <div class="column">
+          <div class="input-box">
+            <label>Phone Number</label>
+            <input type="tel" placeholder="Enter phone number" maxlength="10" id="num"  />
+         </div>
+         <div class="input-box">
+              <label>Date Of Birth</label>
+              <input type="date" placeholder="Enter birth date" id="dob" />
+            </div>
+        </div>
+        <div class="gender-box">
+          <h3>Gender</h3>
+          <div class="gender-option">
+            <div class="gender">
+              <input type="radio" id="check-male" name="gender" id="Male" />
+              <label for="check-male">Male</label>
+            </div>
+            <div class="gender">
+              <input type="radio" id="check-female" name="gender" id="Female" />
+              <label for="check-female">Female</label>
+            </div>
+          </div>
+       </div>
+        <div class="input-box address">
+          <label>Address</label>
+          <input type="text" placeholder="Enter address" id="add"  />
+          <div class="column">
+            <div class="select-box" id="country">
+              <select>
+                <option hidden>Country</option>
+                <option>India</option>
+              </select>
+            </div>
+           <div class="select-box" id="state">
+              <select>
+                <option hidden>State</option>
+                <option>Andhra Pradesh</option>
+                <option>Uttar Pradesh</option>
+                <option>Tamil Nadu</option> 
+                <option>Punjab</option>
+                <option>Maharashtra</option>
+                <option>Bihar</option>
+                <option>Assam</option>
+                <option>Karnataka</option>
+                <option>Madhya Pradesh</option>
+                <option>Goa</option>
+                <option>Chhattisgarh</option>
+                <option>Haryana</option>
+                <option>Odisha</option>
+                <option>Meghalaya</option>
+                <option>Arunachal Pradesh</option>
+                <option>Gujarat</option>
+                <option>Mizoram</option>
+                <option>Manipur</option>
+                <option>Kerla</option>
+                <option>Nagaland</option>
+                <option>Rajasthan</option>
+                <option>West Bangal</option>
+                <option>Tripura</option>
+                <option>Sikkim</option>
+                <option>Jharkhand</option>
+                <option>Uttarakhand</option>
+                <option>Himachal Pradesh</option>
+                <option>Telangana</option>
+                <option>Delhi</option>
+                <option>Jammu & Kashmir</option>
+              </select>
+            </div>
+          </div>
+          <div class="column">
+            <input type="text" placeholder="Enter your city" id="city"  />
+            <input type="number" placeholder="Enter PIN code" maxlength="6" id="pin"  />
+          </div>
+        </div>
+       <div class="column">
+        <div class="input-box">
+          <label>Driving Licence</label>
+          <input type="text" placeholder="Enter D.L No.:" maxlength="15" id="dl" >
+        </div>
+        <div class="input-box">
+          <label>Upload Driving Licence</label>
+          <input type="file" id="dl" />
+        </div>
+       </div>
+       <div class="column">
+        <div class="input-box">
+          <label>Authorized Card</label>
+          <div class="select-box" id="auth">
+            <select>
+              <option hidden>Authorized card</option>
+              <option>PAN CARD</option>
+              <option>AADHAAR CARD</option>
+              <option>VOTER ID CARD</option>
+            </select>
+          </div>
+        </div>
+        <div class="input-box">
+          <label> Upload Authroized card</label>
+          <input type="file" id="Auth" />
+        </div>
+       </div>
+      
+       <!-------------------02.  Documents Required For Vehicle  --------------------->
+
+       <div class="input-box">
+         <header>02. Documents Required For Vehicle</header>
+         <label>Vehicle Owner Name</label>
+         <input type="text" placeholder="Enter full name" id="name2"  />
+       </div>
+       <div class="column">
+         <div class="input-box">
+           <label>Vehicle No.</label>
+           <input type="text" placeholder="Enter vehicle No." id="vno"  />
+         </div>
+         <div class="input-box">
+           <label>Vehicle Type</label>
+           <input type="text" placeholder="Enter vehicle type" id="vt" />
+         </div>
+       </div>
+       <div class="column">
+         <div class="input-box">
+           <label>Registration Certificate</label>
+           <input type="text" placeholder="Enter R.C No.:" id="rc">
+         </div>
+         <div class="input-box">
+           <label>Upload Registration Certificate</label>
+           <input type="file" id="rc" />
+         </div>
+       </div>
+       <div class="column">
+        <div class="input-box">
+          <label>Vehicle Insurance</label>
+          <input type="text" placeholder="Enter Insurance No.:" id="ins" >
+        </div>
+        <div class="input-box">
+          <label>Upload Insurance Certificate</label>
+          <input type="file" id="ins"/>
+        </div>
+      </div>
+      <div class="column">
+        <div class="input-box">
+          <label>Pollution Under Control Certificate</label>
+          <input type="text" placeholder="Enter (PUC Certificate) No.:" id="puc">
+        </div>
+        <div class="input-box">
+          <label>Upload PUC Certificate</label>
+          <input type="file" id="puc" />
+        </div>
+      </div>
+      <div class="column">
+        <div class="input-box">
+          <label>Registration Date</label>
+          <input type="date" placeholder="Enter vehicle registration date." id="vds"  />
+        </div>
+        <div class="input-box">
+          <label>Fitness Valid Upto</label>
+          <input type="date" placeholder="Fitness Valid Upto" id="vde"  />
+        </div>
+      </div>
+      <div class="column">
+        <div class="input-box">
+          <label>Vehicle Age</label>
+          <input type="text" placeholder="eg. (3 Years & 5 Months)" id="vage"  />
+        </div>
+        <div class="input-box">
+          <label>Vehicle Type</label>
+          <input type="text" placeholder="Vehicle status" id="vs"  />
+        </div>
+      </div>
+      <!----------------------------03. Checklist of Vehicle ------------------------------>
+      <div class="input-box">
+        <header>03. Checklist of Vehicle</header>
+      </div>
+      <div class="column">
+        <div class="input-box">
+          <label>Monthly Cheklist</label>
+          <input type="month" placeholder="checklist month" id="cm"  />
+        </div>
+        <div class="input-box">
+          <label>Checklist Remarks</label>
+          <input type="text" placeholder="Remarks" id="remarks" />
+        </div>
+      </div>
+        <button onclick="generatorQR()">Submit & Generate QR Code</button>
+        <input type="submit" value="See" class="info-button">See Your Information
+        <a href="https://www.the-qrcode-generator.com/" class="qr-link">QR code generator</a>
+      <h4>Note*</h4>
+      <h5>If QR code is not generated dynamically then Re-Enter the data and click on see button the new page is open where your entry data is available copy it.
+        Come back to registration page click on QR code generator link new tab is open go to free text section paste the data download the Qr code.
+      </h5>
+      </form>
+    </section>
+    <div id="qrcode"></div>
+  <script src="script.js">
+    </script>
+  </body>
+</html>
